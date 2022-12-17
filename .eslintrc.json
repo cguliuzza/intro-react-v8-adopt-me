@@ -4,7 +4,8 @@
     "plugin:import/errors",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
-    "prettier"
+    "plugin: react-hooks/recommended",
+    "prettier" // Make sure prettier is always the last element in the array.
   ],
   "rules": {
     "react/prop-types": 0,

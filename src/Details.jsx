@@ -37,7 +37,14 @@ const Details = () => {
 // errors found in children components will get caught by the ErrorBoundary
 function DetailsWithErrorBoundary(props) {
   return (
-    <ErrorBoundary>
+    <ErrorBoundary
+      errorMessage={
+        <h2>
+          Having trouble locating this pet's details. Try again later or{" "}
+          <Link to="/">click here</Link> to go back to the home page.
+        </h2>
+      }
+    >
       <Details {...props} />
     </ErrorBoundary>
   );

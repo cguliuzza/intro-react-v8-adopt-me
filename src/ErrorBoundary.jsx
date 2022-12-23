@@ -18,10 +18,12 @@ class ErrorBoundary extends Component {
     // every class component must have a render method
     if (this.state.hasError) {
       return (
-        <h2>
-          There was an error with this listing. <Link to="/">Click here</Link>{" "}
-          to back to the home page.
-        </h2>
+        this.props.errorMessage || (
+          <h2>
+            There was an error with this listing. <Link to="/">Click here</Link>{" "}
+            to back to the home page.
+          </h2>
+        )
       );
     }
 
